@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJs CreateElement</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+
+    <script type="text/babel">
+        <a href=""></a>
+        const rootElement = document.querySelector("#root");
+        const root = ReactDOM.createRoot(rootElement);
+
+        //const h1 = React.createElement("h1", { id: "main_header" }, "hello World");
+
+        const topChild = React.createElement("div", { id: "top" }, React.createElement("h1", {}, "Learn web development"));
+        const middleChild1= React.createElement("div", { id: "middle1" }, React.createElement("p", {}, "Explore our growing collection of courses on key web design and development subjects. An industry expert has written each course, helped by members of the Chrome team. Follow the modules sequentially, or dip into the topics you most want to learn about."));
+        const middleChild2 = React.createElement("div", { id: "middle2" }, React.createElement("p", {}, "This tutorial describes how to build an accessible main navigation of a website .  You learn about semantic HTML, accessibility, and how using ARIA attributes can sometimes do more harm than good."));
+        
+        const bottomChild = React.createElement("div", { id: "bottom" }, React.createElement("p", {}, "DThe relationship between two colors in WCAG 2.1 is described by their contrast ratio—that is, the number you get when you compare the luminance of two colors. Luminance is a way of describing how close a color is to black (0%) or white (100%). WCAG defines some rules and calculation algorithms around what that contrast ratio needs to be in order for the web to be accessible. There are known issues with this calculation, though. Eventually an even more reliable way will be adopted, but, currently, WCAG is the best we have."));
+         const Comp = React.createElement("div", { id: "main_div" }, topChild,middleChild1,middleChild2, bottomChild);
+
+
+        // function Comp1({ dts: { name }, age }) {
+        //     const users = [{
+        //         fname: "samiul",
+        //         lname: "khan"
+        //     }, {
+        //         fname: "piyush",
+        //         lname: "yadav"
+        //     }, {
+        //         fname: "Udit",
+        //         lname: "Singh"
+        //     }]
+        //     return (
+        //         <div id="sec_div">
+        //             <div id="top">
+        //                 <h1>Intro {age} {name}</h1>
+        //             </div>
+        //             <div id="bottom">
+        //                 <p>Desc</p>
+        //                 {users.map(user => {
+        //                     return <p>{`${user.fname} ${user.lname}`}</p>
+        //                 })}
+
+        //             </div>
+        //         </div>
+        //     )
+        // }
+        // function Main() {
+        //     const obj = {
+        //         name: "samiul",
+        //         age: 21
+        //     };
+        //     return (
+        //         <div>
+        //             <Comp1 dts={obj} age="21" />
+        //             <div id="main_div">
+        //                 <div id="top">
+        //                     <h1>Intro</h1>
+        //                 </div>
+        //                 <div id="bottom">
+        //                     <p>Desc</p>
+        //                 </div>
+        //             </div>
+
+        //         </div>
+        //     )
+        // }
+        root.render(Comp);
+
+
+
+
+    </script>
+
+</body>
+
+</html>
